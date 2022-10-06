@@ -10,7 +10,6 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 // input-data
 const kmValue = parseFloat(prompt("How many km do you want to travel?"));
-
 const userAge = parseInt(prompt("How old are you?"));
 // ---------------------------------------------------------------------------------------
 
