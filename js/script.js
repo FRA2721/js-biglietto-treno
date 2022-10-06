@@ -9,24 +9,32 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 // ---------------------------------------------------------------------------------------
 
 // input-data
-const km = parseFloat(prompt("How many km do you want to travel?"));
-const age = parseInt(prompt("How old are you?"));
+const kmValue = parseFloat(prompt("How many km do you want to travel?"));
+const userAge = parseInt(prompt("How old are you?"));
 // ---------------------------------------------------------------------------------------
 
 // operations/conditions
-const info = " ";
+const infoPrice = " ";
+const sentinelPrice = 0.21;
+const ticketPrice = kmValue*sentinelPrice;
 
-if (age < 18) {
-    info = `You are under 18... You have a discount of 20%, so the price of your ticket is ${totalPrice}. Thank you for booking your ticket!`;
-}else if (age > 65) {
-    info = `You are over 65... You have a discount of 40%, so the price of your ticket is ${totalPrice}. Thank you for booking your ticket!`;
+// discounts
+const ticketPrice20 = ticketPrice - ((ticketPrice/100)*20);
+const ticketPrice40 = ticketPrice - ((ticketPrice/100)*40);
+
+if (userAge < 18) { 
+    infoPrice = `You are under 18... You have a discount of 20%, so the price of your ticket is ${ticketPrice20}. Thank you for booking your ticket!`;
+
+}else if (userAge > 65) {
+    infoPrice = `You are over 65... You have a discount of 40%, so the price of your ticket is ${ticketPrice40}. Thank you for booking your ticket!`;
+
 }else {
-    info = `The price of your ticket is ${totalPrice}. Thank you for booking your ticket!`;
+    infoPrice = `The price of your ticket is ${ticketPrice}. Thank you for booking your trip!`;
 }
 // ---------------------------------------------------------------------------------------
 
 // output-data
-alert(info);
+alert(infoPrice);
 // ---------------------------------------------------------------------------------------
 
 // end
