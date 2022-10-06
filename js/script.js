@@ -9,18 +9,24 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 // ---------------------------------------------------------------------------------------
 
 // input-data
-
 const km = parseFloat(prompt("How many km do you want to travel?"));
 const age = parseInt(prompt("How old are you?"));
 // ---------------------------------------------------------------------------------------
 
 // operations/conditions
-// total price operation;
-// discount operation;
+const info = " ";
+
+if (age < 18) {
+    info = `You are under 18... You have a discount of 20%, so the price of your ticket is ${totalPrice}. Thank you for booking your ticket!`;
+}else if (age > 65) {
+    info = `You are over 65... You have a discount of 40%, so the price of your ticket is ${totalPrice}. Thank you for booking your ticket!`;
+}else {
+    info = `The price of your ticket is ${totalPrice}. Thank you for booking your ticket!`;
+}
 // ---------------------------------------------------------------------------------------
 
 // output-data
-// train ticket total price
+alert(info);
 // ---------------------------------------------------------------------------------------
 
 // end
