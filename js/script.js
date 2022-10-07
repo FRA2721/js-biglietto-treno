@@ -15,8 +15,8 @@ const userAge = parseInt(prompt("How old are you?"));
 
 // operations/conditions
 let infoPrice = ` `;
-const sentinelPrice = 0.21;
-let ticketPrice = kmValue*sentinelPrice;
+const constantPrice = 0.21;
+let ticketPrice = kmValue*constantPrice;
 ticketPrice = ticketPrice.toFixed(2);
 
 // discount 20%
